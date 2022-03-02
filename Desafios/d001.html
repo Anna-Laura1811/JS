@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios de mensagens</title>
+     <style>
+         
+         div#area {
+             font: normal 20pt arial;
+             background: rgba(247, 3, 234, 0.363);
+             color: rgb(0, 0, 0);
+             width: 100px;
+             height: 100px;
+             line-height: 100px;
+             text-align: center;
+             display:inline-block 
+         }
+       
+     </style>
+</head>
+<body>
+    <h1>Desafios de mensagens.</h1> 
+    <div id = 'area' onclick = "clicar()" >
+      Botão 1
+    </div>
+    <div id = 'area' onclick = "clicar2()" >
+        Botão 2
+    </div>
+    <div id = 'area' onclick = "clicar3()" >
+        Botão 3
+    </div>
+    
+    <script>
+            function clicar(){
+              var a = window.document.getElementById('area')
+               window.alert('Você clicou no 1ºBotão!.')
+            }
+            function clicar2(){
+              var a = window.document.getElementById('area')
+               window.alert('Você clicou no 2ºBotão!.')
+            }
+            function clicar3(){
+              var a = window.document.getElementById('area')
+               window.alert('Você clicou no 3ºBotão!.')
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula desconto</title>
+    <style>
+         
+        div#area {
+            font: normal 10pt arial;
+            background: rgba(247, 3, 234, 0.363);
+            color: rgb(0, 0, 0);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            display:inline-block 
+            
+        }
+      
+    </style>
+    </head>
+    <body>
+        <h1>Calcular desconto.</h1> 
+        <div id = 'area' onclick = "clicar()" >
+        Desconto de 10%
+        </div>
+        <div id = 'res'></div>
+<script>
+   {     
+        function clicar(){
+        var a = window.document.getElementById('area')
+        var res = window.document.getElementById('res')
+        var produto_nome = window.prompt('Qual produto você esta comprando?')
+        var custo_produto = Number(window.prompt (`Quanto custa ${ produto_nome } que você está comprando?`)) 
+        var desconto = custo_produto * 0.1
+        var preço_final = custo_produto - desconto
+         
+        res.style.fontSize = "17px"  
+        res.style.font 
+        res.innerHTML  = `<h2>Calculando o desconto de 10% para ${ produto_nome }</h2>`
+        res.innerHTML  += `<p> O preço original era ${custo_produto.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})} . </p>`
+        res.innerHTML  += `<p>Você acaba de ganhar ${desconto.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) }de desconto (-10%). </p>`
+        res.innerHTML  += `<p>Vai pagar ${preço_final.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})} . Volte Sempre! </p>`
+    
+   
+}
+   }
+
+
+ </script>
+</body>
+</html>              

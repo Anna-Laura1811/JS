@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+    <style>
+         
+        div#area {
+            font: normal 10pt arial;
+            background: rgba(247, 3, 234, 0.363);
+            color: rgb(0, 0, 0);
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            display:inline-block 
+            
+        }
+      
+    </style>
+    </head>
+    <body>
+        <h1>Resolvendo Bhaskara </h1> 
+        <div id = 'area' onclick = "clicar()" >
+        Calcular
+        </div>
+        <div id = 'res'></div>
+<script>
+       
+        function clicar(){
+        var ar = window.document.getElementById('area')
+        var a = window.prompt('Qual é o valor de a?')
+        var b = Number(window.prompt (`Qual é o valor de b?`))
+        var c =  Number(window.prompt (`Qual é o valor de c?`)) 
+        var equação  =  ` ${ a } x² + ${ b } x + ${ c } = 0` 
+        var  calc_to_delta  =  ` ${b }² - 4 . ${ a } . ${c } ` 
+        var  delta  =  b  **  2  -  4  * a  *  c 
+        var res = window.document.getElementById('res')
+
+        res.style.fontSize = "17px"  
+        res.style.font 
+        res.innerHTML  =  ('<h2>Resolvendo Bhaskara </h2>' )
+        res.innerHTML  += (`A equação atual é <b> ${ equação}`)
+        res.innerHTML  += `<p> O realizado será <b>𝚫 = ${ calc_to_delta } </p>`
+        res.innerHTML  += `<p>O valor calculado foi <b class="recuperacao"> 𝚫= ${ delta }</p>`
+      
+    
+   
+
+   }
+
+
+ </script>
+</body>
+</html> 
